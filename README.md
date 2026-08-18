@@ -22,15 +22,13 @@
 
 ### 二：伏笔埋了，然后烂尾了
 
-> 故事是对读者开出又兑现的承诺。——桑德森 BYU 318R（承诺—推进—兑现）
-
 **问题**：开出的悬念、誓言、伏笔散落在几十万字里，作者和 AI 都会忘。
 
-**解法**：**承诺账本**。每条承诺记录开出→推进→兑现的全生命周期，工作账本只留未兑现项，一眼读完，每次写作必读。
+**解法**：**承诺—推进—兑现**。故事是对读者开出又兑现的承诺；**承诺账本**记录每条承诺的全生命周期，工作账本只留未兑现项，一眼读完，每次写作必读。词汇层见 [story-promises](./skills/story-promises/SKILL.md)。
 
 ### 三：被流程绑架
 
-**问题**：多数写作工具假设你先有大纲。但桑德森讲得很清楚：发现式与大纲式是光谱，且情节、人物、世界观三个维度可以不同——他本人就是情节大纲式+人物发现式。
+**问题**：多数写作工具假设你先有大纲。但发现式与大纲式是光谱，且情节、人物、世界观三个维度可以不同——许多成熟作者就是情节大纲式+人物发现式。
 
 **解法**：**`/setup-story`** 按三维度记录你的光谱和执笔模式（AI 主笔/共笔/作者主笔），之后每个 skill 都按你的方式配合你。发现式作者永远不会被要求先写大纲。
 
@@ -42,13 +40,23 @@
 
 ## Reference
 
-按调用方式分两类：**手动**的只在你输入时触发，负责编排；**自动**的模型可以自己够到，承载可复用的纪律。
+按调用方式分两类：**手动**的只在你输入时触发，负责编排；**自动**的模型可以自己够到，承载可复用的纪律与词汇。
 
-- **[setup-story](./skills/setup-story/SKILL.md)**（手动）— 开新作品：访谈光谱、执笔模式、git/纯本地二选一，安装收割护栏。每部作品一次。
-- **[story-develop](./skills/story-develop/SKILL.md)**（手动）— 发展想法，不写正文：大纲式维度盘问，发现式维度攒碎片。
-- **[story-write](./skills/story-write/SKILL.md)**（手动）— 写正文的日常主循环：开工恢复记忆，收尾自动收割、记账、存档。
-- **[story-harvest](./skills/story-harvest/SKILL.md)**（自动）— 收割：从新正文提取设定入圣经、承诺入账本，冲突即报告。
-- **[story-absorb](./skills/story-absorb/SKILL.md)**（手动）— 把一位写作大师的方法吸收进体系，保持极简。
-- **[story-help](./skills/story-help/SKILL.md)**（手动）— 路标：不记得用哪个时问它。
+**主流程（手动）**
 
-术语表：[`CONTEXT.md`](./CONTEXT.md)。设计哲学与决策记录：[`docs/`](./docs/)。已吸收的大师方法：[`docs/sources/`](./docs/sources/)。
+- **[setup-story](./skills/setup-story/SKILL.md)** — 开新作品：访谈光谱、执笔模式、git/纯本地二选一，安装收割护栏。每部作品一次。
+- **[story-develop](./skills/story-develop/SKILL.md)** — 发展想法，不写正文：大纲式维度盘问，发现式维度攒碎片。
+- **[story-write](./skills/story-write/SKILL.md)** — 写正文的日常主循环：开工恢复记忆，收尾自动收割、记账、存档。
+- **[story-absorb](./skills/story-absorb/SKILL.md)** — 把一套新的写作方法吸收进体系，保持极简。
+- **[story-help](./skills/story-help/SKILL.md)** — 路标：不记得用哪个时问它。
+
+**纪律（自动）**
+
+- **[story-harvest](./skills/story-harvest/SKILL.md)** — 收割：从新正文提取设定入圣经、承诺入账本，冲突即报告。
+
+**词汇层（自动）**——在其他 skill 之下运行的共享方法，各自是其词汇的唯一出处：
+
+- **[story-promises](./skills/story-promises/SKILL.md)** — 承诺方法：承诺·推进·兑现，账本格式与状态机。
+- **[story-character](./skills/story-character/SKILL.md)** — 人物方法：欲望·恐惧·三滑尺·语言习惯的档案格式。
+
+术语表：[`CONTEXT.md`](./CONTEXT.md)。
