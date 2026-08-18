@@ -6,7 +6,9 @@ disable-model-invocation: true
 
 为一部新作品建立工作目录。这是一次访谈，不是一张表格：逐轮提问，每题给出推荐答案，作者可以只说"都听你的"就用全部推荐值开始。
 
-访谈只问四件事，其余一切留给写作过程中自然生长。
+约定：**目录即作品**——在哪个目录开会话就写哪部作品，`story.md` 是作品标记。
+
+访谈只问五件事，其余一切留给写作过程中自然生长。
 
 ## 访谈
 
@@ -21,7 +23,11 @@ disable-model-invocation: true
 
 向作者说明：这是光谱不是二选一，且三个维度可以不同——桑德森本人就是情节大纲式+人物发现式。没有对错，选择只决定后续 skill 怎么配合你，不决定作品质量。拿不准就选发现式，随时可改。
 
-**第 3 轮 —— 存稿管理方式**
+**第 3 轮 —— 执笔模式**
+
+写正文时默认谁执笔？(a) **AI 主笔**：你给意图，AI 写，你审改；(b) **共笔**：你写骨架或开头，AI 扩写接力；(c) **作者主笔**：你写，AI 只做现场编辑。写进档案作为默认值，写作中随时一句话切换。
+
+**第 4 轮 —— 存稿管理方式**
 
 给作者两个选项，把原因讲清楚，推荐 git：
 
@@ -30,7 +36,7 @@ disable-model-invocation: true
 
 选纯本地的作者告知一句：以后随时可以无损转为 git 管理，一句话的事。
 
-**第 4 轮 —— 放在哪**
+**第 5 轮 —— 放在哪**
 
 作品目录的位置和名字。
 
@@ -40,7 +46,7 @@ disable-model-invocation: true
 
 ```
 <作品名>/
-├── story.md            # 故事档案：光谱定位、管理方式、访谈里说清的一切
+├── story.md            # 故事档案：光谱、执笔模式、管理方式、访谈里说清的一切
 ├── ledger/promises.md  # 账本，此刻只有第一条：类型承诺
 ├── manuscript/         # 空目录，等第一章
 └── notes/inbox.md      # 收件箱，附一行说明：灵感随手丢这里，格式不限
@@ -50,6 +56,33 @@ disable-model-invocation: true
 
 选了 git：静默执行 `git init` 与首次提交，提交信息"开坑"。此后一切 git 操作都不出现在与作者的对话里。
 
-## 完成
+## 收割护栏（静默安装）
 
-故事档案写齐、第一条承诺入账、目录建立（git 模式下已首次提交），并告诉作者下一步：想先发展想法就 `/develop`，想直接开写就 `/write`。
+在作品目录写入一个 Stop hook，作为收割的确定性兜底——正文文件比账本新且已放置超过 20 分钟时，向 agent 提示运行收割。平时零输出、零打扰。
+
+`.claude/hooks/check-harvest.sh`（记得 `chmod +x`）：
+
+```bash
+#!/bin/bash
+# 收割护栏：有搁置未收割的正文时提醒，其余时候静默
+[ -f ledger/promises.md ] || exit 0
+m=$(find manuscript -name '*.md' -newer ledger/promises.md -mmin +20 2>/dev/null | head -1)
+[ -n "$m" ] && echo "提醒：$m 等正文尚未收割，请运行收割（story-harvest）。"
+exit 0
+```
+
+`.claude/settings.json`：
+
+```json
+{
+  "hooks": {
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "bash .claude/hooks/check-harvest.sh" }] }
+    ]
+  }
+}
+```
+
+## 收尾
+
+故事档案写齐、第一条承诺入账、目录与护栏建立（git 模式下已首次提交），并告诉作者下一步：想先发展想法就 `/story-develop`，想直接开写就 `/story-write`。
