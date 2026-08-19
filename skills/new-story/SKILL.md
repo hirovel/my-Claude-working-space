@@ -1,5 +1,5 @@
 ---
-name: setup-story
+name: new-story
 description: 为一部新小说建立作品目录与写作方式档案。每部作品运行一次。
 disable-model-invocation: true
 ---
@@ -67,7 +67,7 @@ disable-model-invocation: true
 # 收割护栏：有搁置未收割的正文时提醒，其余时候静默
 [ -f ledger/promises.md ] || exit 0
 m=$(find manuscript -name '*.md' -newer ledger/promises.md -mmin +20 2>/dev/null | head -1)
-[ -n "$m" ] && echo "提醒：$m 等正文尚未收割，请运行收割（story-harvest）。"
+[ -n "$m" ] && echo "提醒：$m 等正文尚未收割，请运行收割（harvest）。"
 exit 0
 ```
 
@@ -85,4 +85,4 @@ exit 0
 
 ## 收尾
 
-故事档案写齐、第一条承诺入账、目录与护栏建立（git 模式下已首次提交），并告诉作者下一步：想先发展想法就 `/story-develop`，想直接开写就 `/story-write`。
+故事档案写齐、第一条承诺入账、目录与护栏建立（git 模式下已首次提交），并告诉作者下一步：想先发展想法就 `/brew`，想直接开写就 `/draft`。

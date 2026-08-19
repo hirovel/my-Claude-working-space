@@ -137,3 +137,10 @@ M1 阶段它很短，随体系生长。
 | 世界观独立 skill | 暂不建，世界观发展住在 /story-develop 里；实测出现真实需求再拆 |
 
 每个用户触发 skill 末尾加"接下来"指路（采纳 oh-story 的流程衔接惯例的轻量版）。
+
+## 六、命名 v2（2026-08-19）
+
+story- 前缀实验失败：重复且读不出动作。新方案——独特动作词 + 词汇层名词，无共享前缀：
+new-story（开书）/ brew（酝酿）/ draft（起草）/ harvest（收割）/
+promises·characters（词汇层）/ absorb（吸收）/ ask-editor（问编辑，呼应 ask-matt）。
+命名原则入档：主流程用"对编辑说的动作"，词汇层用方法名词，禁用通用动词（write/develop）。

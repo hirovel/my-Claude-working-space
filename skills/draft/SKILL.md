@@ -1,5 +1,5 @@
 ---
-name: story-write
+name: draft
 description: 写小说正文。日常写作主循环。
 disable-model-invocation: true
 ---
@@ -28,8 +28,8 @@ disable-model-invocation: true
 
 按档案里情节维度的光谱进入：
 
-- **大纲式**：从大纲取下一场。落笔前想清两件事并用一句话和作者确认：这一场推进哪条承诺？结束时什么变了（关系、信息、处境）？承诺的词汇见 story-promises（Skill 工具调用）。
-- **发现式**：从"人物此刻想要什么"直接向前写。落笔前在心里想清这个问题即可，不必问作者——发现式作者的大纲在身后。人物拿不准时查档案，用法见 story-character（Skill 工具调用）。
+- **大纲式**：从大纲取下一场。落笔前想清两件事并用一句话和作者确认：这一场推进哪条承诺？结束时什么变了（关系、信息、处境）？承诺的词汇见 promises（Skill 工具调用）。
+- **发现式**：从"人物此刻想要什么"直接向前写。落笔前在心里想清这个问题即可，不必问作者——发现式作者的大纲在身后。人物拿不准时查档案，用法见 characters（Skill 工具调用）。
 
 写作中：
 
@@ -44,7 +44,7 @@ disable-model-invocation: true
 
 作者说今天到这儿，或一章写完时：
 
-1. 运行**收割**（story-harvest skill）。
+1. 运行**收割**（harvest skill）。
 2. 更新 `handoff.md`：写到哪、账本有什么变化、下一场的意图（覆盖旧内容，不累积）。
 3. git 模式下提交一次，信息形如"第 3 章·灰市（写至第 2 场）"。
 
@@ -52,5 +52,5 @@ disable-model-invocation: true
 
 ## 接下来
 
-- 继续写 → 下次直接 `/story-write`
-- 写作中想停下来理思路、聊设定 → `/story-develop`
+- 继续写 → 下次直接 `/draft`
+- 写作中想停下来理思路、聊设定 → `/brew`

@@ -1,5 +1,5 @@
 ---
-name: story-absorb
+name: absorb
 description: 把一位写作大师的方法吸收进这套体系，同时保持体系极简。
 disable-model-invocation: true
 ---
