@@ -1,5 +1,5 @@
 ---
-name: ask-editor
+name: ask-hiro
 description: 小说写作 skills 的路标——不记得该用哪个时问它。
 disable-model-invocation: true
 ---

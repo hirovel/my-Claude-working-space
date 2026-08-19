@@ -48,7 +48,7 @@
 - **[brew](./skills/brew/SKILL.md)** — 酝酿：把想法聊成故事的盘问访谈，边聊边沉淀并校准档案。
 - **[draft](./skills/draft/SKILL.md)** — 起草：日常写作主循环，开工恢复记忆，收尾自动收工。
 - **[absorb](./skills/absorb/SKILL.md)** — 把一套新的写作方法吸收进体系，保持极简。
-- **[ask-editor](./skills/ask-editor/SKILL.md)** — 路标：不记得用哪个时问它。
+- **[ask-hiro](./skills/ask-hiro/SKILL.md)** — 路标：不记得用哪个时问它。
 
 **纪律（自动）**
 
