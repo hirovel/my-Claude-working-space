@@ -144,3 +144,15 @@ story- 前缀实验失败：重复且读不出动作。新方案——独特动�
 new-story（开书）/ brew（酝酿）/ draft（起草）/ harvest（收割）/
 promises·characters（词汇层）/ absorb（吸收）/ ask-editor（问编辑，呼应 ask-matt）。
 命名原则入档：主流程用"对编辑说的动作"，词汇层用方法名词，禁用通用动词（write/develop）。
+
+## 七、setup/brew 拆分与收工纪律（2026-08-19，架构 v3）
+
+学 matt 的 setup 与 grill-with-docs 分工：配置是一次性的、无聊的；对齐是终身的、增值的，绝不混在一个 skill 里。
+- new-story → **setup-story-skills**：纯机械配置（目录、git/纯本地、偏好默认值），不碰创作，不固定轮数。
+- **brew 升格为 grill-with-docs 的对应物**：有纸痕的访谈——前提、类型承诺（第一条入账）、圣经/大纲/碎片、
+  且**边聊边校准档案**（光谱与执笔模式是活配置）。账本和圣经从此在 brew 里诞生，setup 不预建。
+- story.md → **story-profile.md**：只放工作偏好，不放故事内容。
+- 新增纪律 **wrap（收工）**：收割→交接→存档，draft/brew 收尾各减为一行；修复 handoff 单写者漏洞。
+- 护栏 hook 修 bug：条件改为"最新正文停笔超 20 分钟且账本落后"，写作进行中永远沉默；
+  hook 模板外置到 setup-story-skills/assets/。
+- draft 删除词汇层冗余指针（账本在手，格式自明）。
